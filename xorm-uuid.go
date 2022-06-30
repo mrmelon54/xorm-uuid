@@ -18,3 +18,11 @@ func (u *XormUUID) FromDB(data []byte) error {
 func (u *XormUUID) ToDB() ([]byte, error) {
 	return u[:], nil
 }
+
+func (u *XormUUID) String() string {
+	return uuid.UUID(u).String()
+}
+
+func (u *XormUUID) ToHex() string {
+	return strings.ReplaceAll(u.String(), "-", "")
+}
