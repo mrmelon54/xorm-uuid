@@ -2,6 +2,7 @@ package xorm_uuid
 
 import (
 	"github.com/google/uuid"
+	"strings"
 )
 
 type XormUUID uuid.UUID
@@ -20,7 +21,7 @@ func (u *XormUUID) ToDB() ([]byte, error) {
 }
 
 func (u *XormUUID) String() string {
-	return uuid.UUID(u).String()
+	return uuid.UUID(*u).String()
 }
 
 func (u *XormUUID) ToHex() string {
