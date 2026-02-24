@@ -1,9 +1,9 @@
 module github.com/mrmelon54/xorm-uuid
 
-go 1.18
+go 1.26.0
 
 require (
-	github.com/google/uuid v1.3.0
+	github.com/google/uuid v1.6.0
 	github.com/mattn/go-sqlite3 v1.14.9
 	github.com/stretchr/testify v1.7.0
 	xorm.io/xorm v1.3.1
